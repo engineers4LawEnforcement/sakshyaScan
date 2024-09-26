@@ -20,6 +20,52 @@
             <div class="video-container">
                 <div class="video-item">
                     <h2>Android Version</h2>
+                    <div class="carousel-container">
+                        <h3>What does the android app version solve?</h3>
+                        <h4>A solution focussed on browser-automation alone with the popular solution "Selenium" is
+                            likely to fail in
+                            resolving a problem specifically highlighted in the Problem-Statement, reading <var>"Many a
+                                times, the social media accounts do not open in Desktops even if we have the right
+                                credentials and the examiner
+                                have to use a dummy android phone."
+                            </var>
+                            <br />
+                            Our solution addresses this very same issue by employing "Appium" framework for automation
+                            in addition to Selenium for browser-automation and is demonstrated below in the prototype
+                            video:-
+                        </h4>
+                        <div class="slide fade-effect">
+                            <div class="slide-number">1 / 5</div>
+                            <img src="ques1.png" alt="Image 1">
+                        </div>
+                        <div class="slide fade-effect">
+                            <div class="slide-number">2 / 5</div>
+                            <img src="ques2.png" alt="Image 2">
+                        </div>
+                        <div class="slide fade-effect">
+                            <div class="slide-number">3 / 5</div>
+                            <img src="ques3.png" alt="Image 3">
+                        </div>
+                        <div class="slide fade-effect">
+                            <div class="slide-number">4 / 5</div>
+                            <img src="ques4.png" alt="Image 3">
+                        </div>
+                        <div class="slide fade-effect">
+                            <div class="slide-number">5 / 5</div>
+                            <img src="ques5.png" alt="Image 3">
+                        </div>
+                        <a class="prev-btn" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next-btn" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+                    <div style="text-align:center">
+                        <span class="indicator" onclick="currentSlide(1)"></span>
+                        <span class="indicator" onclick="currentSlide(2)"></span>
+                        <span class="indicator" onclick="currentSlide(3)"></span>
+                        <span class="indicator" onclick="currentSlide(4)"></span>
+                        <span class="indicator" onclick="currentSlide(5)"></span>
+                    </div>
+                    <h3>How does the prototype work?</h3>
                     <div class="codeBlock">
                         <div style="padding: 6px; background-color: rgb(0, 0, 0); color: bisque;">
                             <var>credentials.py</var>
@@ -172,25 +218,25 @@
                 </div>
             </div>
             <div>
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides2(1)">&#10095;</a>
             </div>
         </div>
 
     </main>
     <div class="footer">
-        <p><code>Note: This website serves the purpose of demonstration of prototypes only and no other. This is not the actual tool, nor does it`s UI resemble that of the intended tool. The tool developed will be two separate
+        <p><code>Note: This website serves the purpose of demonstration of prototypes only and no other. This is not the actual end-product, nor does it`s UI resemble it. The final product being developed is separate
             versions(mobile and desktop) of the same application with a much much prettier interface and not a bare-bones website such as the likes of this one. Cheers! <code></p>
     </div>
     <script>
         let slideIndex = 1;
-        showSlides(slideIndex);
+        showSlides2(slideIndex);
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
+        function plusSlides2(n) {
+            showSlides2(slideIndex += n);
         }
 
-        function showSlides(n) {
+        function showSlides2(n) {
             let i;
             let slides = document.getElementsByClassName("mySlides");
             if (n > slides.length) { slideIndex = 1 }
@@ -199,6 +245,34 @@
                 slides[i].style.display = "none";
             }
             slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+    <script>
+        let secondSlideIndex = 1;
+        showSlides(secondSlideIndex);
+
+        function plusSlides(n) {
+            showSlides(secondSlideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(secondSlideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            let indicators = document.getElementsByClassName("indicator");
+            if (n > slides.length) { secondSlideIndex = 1 }
+            if (n < 1) { secondSlideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < indicators.length; i++) {
+                indicators[i].className = indicators[i].className.replace(" active", "");
+            }
+            slides[secondSlideIndex - 1].style.display = "block";
+            indicators[secondSlideIndex - 1].className += " active";
         }
     </script>
 </body>

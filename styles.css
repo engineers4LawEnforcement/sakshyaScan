@@ -24,6 +24,103 @@ main {
     padding: 2rem;
 }
 
+.slide {
+    display: none;
+}
+
+.carousel-container img {
+    vertical-align: top;
+    width: 75%;
+}
+
+.carousel-container {
+    width: 100%;
+    height: 320px;
+}
+
+.video-container h3 {
+    text-align: left;
+}
+
+.video-container h4 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.prev-btn,
+.next-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 90vh;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 32px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next-btn {
+    right: 6%;
+    border-radius: 0 12px 12px 0;
+}
+
+.prev-btn {
+    left: 6%;
+    border-radius: 12px 0 0 12px;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slide-number {
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 109vh;
+    left: 54vw;
+}
+
+.indicator {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.indicator:hover {
+    background-color: #717171;
+}
+
+.fade-effect {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* _________ */
+
 .video-section {
     background-color: #fff;
     padding: 2rem;
@@ -55,12 +152,14 @@ main {
     overflow: auto;
     display: inline-block;
     padding: 1rem;
-    background-color: aquamarine;
+    background-color: rgb(127, 129, 255);
     border-radius: 0 25px 25px 0;
+    color: aliceblue;
+    ;
 }
 
 .codeBlock {
-    width: 850px;
+    width: 100%;
     height: 140px;
     background-color: rgb(127, 134, 132);
     text-align: left;
@@ -91,9 +190,10 @@ main {
 
 .mySlides h3 {
     text-align: center;
-    background-color: aquamarine;
+    background-color: rgb(127, 129, 255);
     padding: 10px;
     border-radius: 25px;
+    color: aliceblue;
 }
 
 .pdfInfo {
@@ -102,15 +202,16 @@ main {
     height: 700px;
     display: inline-block;
     padding: 2rem;
-    background-color: aquamarine;
+    background-color: rgb(127, 129, 255);
     border-radius: 0 25px 25px 0;
+    color: aliceblue;
 }
 
 .prev,
 .next {
     cursor: pointer;
     position: absolute;
-    top: 210vh;
+    top: 290vh;
     width: auto;
     padding: 16px;
     margin-top: -22px;
