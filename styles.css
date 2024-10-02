@@ -147,9 +147,9 @@ main {
 
 .videoInfo {
     margin-left: 10px;
-    width: 400px;
+    width: 350px;
     text-align: left;
-    font-size: 16px;
+    font-size: 14px;
     height: 380px;
     overflow: auto;
     display: inline-block;
@@ -210,10 +210,10 @@ main {
 
 .pdfInfo {
     margin-left: 10px;
-    width: 250px;
+    width: 300px;
     height: 700px;
     display: inline-block;
-    padding: 1.5rem;
+    padding: 2rem;
     background-color: rgb(127, 129, 255);
     border-radius: 0 25px 25px 0;
     color: aliceblue;
