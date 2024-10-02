@@ -210,10 +210,10 @@ main {
 
 .pdfInfo {
     margin-left: 10px;
-    width: 300px;
+    width: 250px;
     height: 700px;
     display: inline-block;
-    padding: 2rem;
+    padding: 1.5rem;
     background-color: rgb(127, 129, 255);
     border-radius: 0 25px 25px 0;
     color: aliceblue;
