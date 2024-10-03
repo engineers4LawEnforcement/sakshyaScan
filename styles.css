@@ -217,6 +217,7 @@ main {
     background-color: rgb(127, 129, 255);
     border-radius: 0 25px 25px 0;
     color: aliceblue;
+    vertical-align: top;
 }
 
 .prev,
