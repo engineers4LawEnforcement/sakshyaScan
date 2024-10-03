@@ -225,24 +225,23 @@ main {
     cursor: pointer;
     position: relative;
     width: auto;
-    padding: 16px;
-    top: 60px;
-    color: rgb(0, 0, 0);
+    padding: 4px 16px;
+    top: 56px;
+    color: white;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 28px;
     transition: 0.6s ease;
-    border-radius: 0 12px 12px 0;
     user-select: none;
 }
 
 .next {
-    left: 33%;
-    border-radius: 0 12px 12px 0;
+    left: 34.5%;
+    border-radius: 0 25px 25px 0;
 }
 
 .prev {
-    right: 33%;
-    border-radius: 12px 0 0 12px;
+    right: 34.5%;
+    border-radius: 25px 0 0 25px;
 }
 
 .prev:hover,
