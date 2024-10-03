@@ -147,9 +147,9 @@ main {
 
 .videoInfo {
     margin-left: 10px;
-    width: 350px;
+    width: 400px;
     text-align: left;
-    font-size: 14px;
+    font-size: 16px;
     height: 380px;
     overflow: auto;
     display: inline-block;
@@ -212,12 +212,12 @@ main {
     margin-left: 10px;
     width: 300px;
     height: 700px;
+    vertical-align: top;
     display: inline-block;
     padding: 2rem;
     background-color: rgb(127, 129, 255);
     border-radius: 0 25px 25px 0;
     color: aliceblue;
-    vertical-align: top;
 }
 
 .prev,
